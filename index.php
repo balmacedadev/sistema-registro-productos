@@ -67,7 +67,7 @@
         <!-- DESCRIPCIÓN -->
         <div class="bloque">
             <label>Descripción</label>
-            <textarea id="descripcion" rows="4"></textarea>
+            <textarea id="descripcion" minlength="10" maxlength="1000"></textarea>
         </div>
 
         <!-- BOTÓN -->

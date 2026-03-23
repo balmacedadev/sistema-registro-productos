@@ -240,19 +240,20 @@ function validarSelect(id, nombreCampo) {
 function validarDescripcion() {
     const descripcion = document.getElementById("descripcion").value.trim();
 
-    if (descripcion === "") {
-        alert("La descripción no puede estar en blanco.");
+    if (descripcion.length === 0) {
+        alert("La descripción es obligatoria");
+        return false;
+    }
+
+    if (descripcion.length < 10) {
+        alert("La descripción debe tener al menos 10 caracteres");
         return false;
     }
 
     if (descripcion.length > 1000) {
-        alert("La descripción no puede superar los 1000 caracteres.");
+        alert("La descripción no puede superar los 1000 caracteres");
         return false;
     }
-    if (descripcion.length < 5) {
-        alert("La descripción no puede ser inferior a 5.");
-        return false;
-    }    
 
     return true;
 }
