@@ -249,6 +249,10 @@ function validarDescripcion() {
         alert("La descripción no puede superar los 1000 caracteres.");
         return false;
     }
+    if (descripcion.length < 5) {
+        alert("La descripción no puede ser inferior a 5.");
+        return false;
+    }    
 
     return true;
 }
